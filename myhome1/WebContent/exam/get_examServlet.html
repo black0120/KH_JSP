@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>1. 원하는 구구단의 단수를 입력해주세요.</h2>
+	<form action="./gugudan" method="get">
+		<input type="number" name="dan" min="1" max="9"placeholder="1~9사이 입력">
+		<button type="submit">전송</button>
+	</form>
+
+	<h2>2. 랜덤숫자 발생 범위를 지정해주세요.</h2>
+	<form action="./random" method="get">
+		<input type="number" name="num1" min="0" max="99" placeholder="최소 숫자 0 이상">
+		<input type="number" name="num2" min="1" max="100" placeholder="최대 숫자 100미만">
+		<button type="submit">전송</button>
+	</form>
+
+	<h2>3. 원하는 로또 매수를 입력해주세요.</h2>
+	<form action="./lotto" method="get">
+		<input type="number" name="lottoset" min="1" placeholder="최소 1장 이상 입력">
+		<button type="submit">전송</button>
+	</form>
+</body>
+</html>
