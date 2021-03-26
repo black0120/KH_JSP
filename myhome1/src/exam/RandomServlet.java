@@ -60,29 +60,7 @@ public class RandomServlet extends HttpServlet {
 		
 		int rand = (int)(Math.floor(Math.random() * (num2 - num1 + 1)) + num1);
 		
-		PrintWriter out = response.getWriter(); //PrintWriter : 파일입출력 관련 개체
-		String html = "";
-		html += "<!DOCTYPE html>";
-		html += "<html lang=\"en\">";
-		html += "<head>";
-		html += "    <meta charset=\"UTF-8\">";
-		html += "    <title>" + num1 + " ~ " + num2 + " 범위의 랜덤 번호 생성</title>";
-		html += "</head>";
-		html += "<body>";
-		if(rand <= 20) {
-			html += "	<h1 style=\"color:#F85615\">" + rand + "</h1>";
-		} else if(20 < rand && rand <= 40) {
-			html += "	<h1 style=\"color:#F8156C\">" + rand + "</h1>";
-		} else if(40 < rand && rand <= 60) {
-			html += "	<h1 style=\"color:#159DF8\">" + rand + "</h1>";
-		} else if(60 < rand && rand <= 80) {
-			html += "	<h1 style=\"color:#4AF815\">" + rand + "</h1>";
-		} else if(80 < rand && rand <= 100) {
-			html += "	<h1 style=\"color:#F8E115\">" + rand + "</h1>";
-		}
-		html += "</body>";
-		html += "</html>";
-		out.println(html);
+		response.sendRedirect("random/res?mn="+num1+"&mx="+num2+"&rn="+rand);
 	}
 
 }
